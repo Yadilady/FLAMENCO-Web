@@ -1,26 +1,29 @@
+
+:root {
+    --color-principal: #851A05;
+    --color-secundario: #222;
+    --color-fondo: #f5f5f5;
+    --color-texto: #333;
+}
+
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: var(--color-fondo);
     margin: 0;
-    color: #333;
+    color: var(--color-texto);
 }
 
 
 header {
-    background-color: #851A05;
+    background-color: var(--color-principal);
     color: white;
     text-align: center;
     padding: 30px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
-}
-
-
 nav {
-    background-color: #222;
+    background-color: var(--color-secundario);
     padding: 15px;
     text-align: center;
 }
@@ -28,12 +31,11 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    background-color: #851A05;
+    background-color: var(--color-principal);
     padding: 10px 18px;
     margin: 5px;
     border-radius: 6px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
 nav a:hover {
@@ -56,16 +58,15 @@ main {
 
 
 h2 {
-    color: #851A05;
-    margin-bottom: 15px;
+    color: var(--color-principal);
 }
 
 
 .contenido {
     display: flex;
-    align-items: flex-start; /* antes centrado → ahora más natural */
     gap: 25px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 
@@ -78,54 +79,64 @@ h2 {
 
 .texto {
     flex: 1;
-    min-width: 250px; 
+    min-width: 250px;
 }
-
 
 p {
     line-height: 1.6;
-    margin-bottom: 10px;
 }
 
 
 table {
-    border-collapse: collapse;
     width: 100%;
+    border-collapse: collapse;
     margin-top: 15px;
 }
 
 th, td {
-    border: 1px solid #ccc;
     padding: 12px;
+    border: 1px solid #ccc;
+    text-align: left;
 }
 
-th {
-    background-color: #851A05;
+thead th {
+    background-color: var(--color-principal);
     color: white;
 }
 
-td {
-    background-color: #fafafa;
+tbody th {
+    background-color: #eee;
 }
-
 
 tbody tr:nth-child(even) {
-    background-color: #f0f0f0;
+    background-color: #f9f9f9;
 }
 
 
+.video {
+    display: flex;
+    justify-content: center;
+}
+
 iframe {
-    display: block;
-    margin: auto;
+    width: 100%;
+    max-width: 600px;
+    height: 315px;
     border-radius: 10px;
-    max-width: 100%;
+}
+
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: #ddd;
+    margin: 40px 0;
 }
 
 
 footer {
     text-align: center;
-    background-color: #222;
+    background-color: var(--color-secundario);
     color: white;
     padding: 15px;
-    margin-top: 40px;
 }
